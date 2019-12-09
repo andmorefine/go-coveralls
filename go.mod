@@ -1,4 +1,4 @@
-module go-tools
+module go-coveralls
 
 go 1.13
 

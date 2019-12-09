@@ -1,45 +1,29 @@
 package main
 
 import (
-	"errors"
-	"fmt"
-	"os"
+	"io/ioutil"
+	"net/http"
+	"net/http/httptest"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
-type TestCase struct {
-	Name     string
-	Language int
-	errorMtg int
-}
+func TestRoute(t *testing.T) {
+	// テスト用サーバーの立ち上げ
+	ts := httptest.NewServer(Route())
+	defer ts.Close()
 
-func TestMain(m *testing.M) {
-	func() {
-		fmt.Println("Prepare test")
-	}()
-	ret := m.Run()
-	func() {
-		fmt.Println("Teardown test")
-	}()
-
-	os.Exit(ret)
-}
-
-func TestExampleSuccess(t *testing.T) {
-	cases := []struct {
-		st       string
-		expected int
-		errorMtg error
-	}{
-		{"hoge", 1, nil},
-		{"moge", 0, errors.New("code must be hoge")},
+	// テスト用サーバーのURLは、ts.URL で取得できる
+	res, err := http.Get(ts.URL + "/contact?name=gopher")
+	if err != nil {
+		t.Fatalf("http.Get faild: %s", err)
 	}
-
-	for _, testCase := range cases {
-		result, ok := example(testCase.st)
-		assert.Equal(t, result, testCase.expected)
-		assert.Equal(t, ok, testCase.errorMtg)
+	contact, err := ioutil.ReadAll(res.Body)
+	res.Body.Close()
+	if err != nil {
+		t.Fatalf("read from HTTP Response Body failed: %s", err)
+	}
+	expected := "Hello, gopher"
+	if string(contact) != expected {
+		t.Fatalf("response of /contact?name=gopher returns %s, want %s", string(contact), expected)
 	}
 }
