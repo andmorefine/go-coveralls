@@ -6,6 +6,7 @@ require (
 	github.com/cespare/xxhash/v2 v2.1.1 // indirect
 	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/hashicorp/golang-lru v0.5.3 // indirect
+	github.com/mattn/goveralls v0.0.4 // indirect
 	github.com/neelance/parallel v0.0.0-20160708114440-4de9ce63d14c // indirect
 	github.com/opentracing/basictracer-go v1.0.0 // indirect
 	github.com/opentracing/opentracing-go v1.1.0 // indirect
