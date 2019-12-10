@@ -7,7 +7,7 @@ go:
 before_install:
   - go get -t -v ./...
 
-go_import_path: github.com/andmorefine/go-coveralls/book
+go_import_path: github.com/andmorefine/go-coveralls
 
 script:
   - go test -race -coverprofile=coverage.txt -covermode=atomic
