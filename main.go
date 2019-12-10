@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"go-coveralls/book"
 	"log"
 	"net/http"
 )
@@ -22,6 +23,7 @@ func Route() *http.ServeMux {
 
 func main() {
 	m := Route()
+	fmt.Printf(book.OneFeed())
 	log.Fatal(http.ListenAndServe(":8080", m))
 }
 
