@@ -8,5 +8,5 @@ import (
 
 func TestSampleAnimal(t *testing.T) {
 	result := SampleAnimal()
-	assert.Equal(t, "favorite Grass", result)
+	assert.Equal(t, "favorite Banana", result)
 }
