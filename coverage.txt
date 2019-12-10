@@ -6,3 +6,4 @@ go-coveralls/main.go:18.3,18.51 1 1
 go-coveralls/main.go:15.39,17.4 1 0
 go-coveralls/main.go:24.13,28.2 3 0
 go-coveralls/main.go:31.25,33.2 1 0
+go-coveralls/sample.go:8.15,10.2 1 0
