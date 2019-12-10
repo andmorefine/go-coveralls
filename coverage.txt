@@ -1,0 +1,8 @@
+mode: atomic
+go-coveralls/main.go:11.29,14.72 2 1
+go-coveralls/main.go:21.2,21.10 1 1
+go-coveralls/main.go:14.72,15.39 1 1
+go-coveralls/main.go:18.3,18.51 1 1
+go-coveralls/main.go:15.39,17.4 1 0
+go-coveralls/main.go:24.13,28.2 3 0
+go-coveralls/main.go:31.25,33.2 1 0
