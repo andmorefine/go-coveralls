@@ -5,6 +5,7 @@ import (
 	"go-coveralls/animals"
 )
 
-func sample() {
-	fmt.Printf(animals.ElephantFeed())
+// Sample name
+func Sample() string {
+	return fmt.Sprintf("name %s", animals.ElephantFeed())
 }
