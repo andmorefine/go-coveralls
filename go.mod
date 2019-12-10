@@ -8,6 +8,8 @@ require (
 	github.com/hashicorp/golang-lru v0.5.3 // indirect
 	github.com/mattn/goveralls v0.0.4 // indirect
 	github.com/neelance/parallel v0.0.0-20160708114440-4de9ce63d14c // indirect
+	github.com/onsi/ginkgo v1.10.3 // indirect
+	github.com/onsi/gomega v1.7.1 // indirect
 	github.com/opentracing/basictracer-go v1.0.0 // indirect
 	github.com/opentracing/opentracing-go v1.1.0 // indirect
 	github.com/prometheus/client_golang v1.2.1 // indirect
@@ -20,5 +22,5 @@ require (
 	github.com/stretchr/testify v1.3.0
 	golang.org/x/net v0.0.0-20191207000613-e7e4b65ae663 // indirect
 	golang.org/x/sys v0.0.0-20191206220618-eeba5f6aabab // indirect
-	golang.org/x/tools v0.0.0-20191206204035-259af5ff87bd // indirect
+	golang.org/x/tools v0.0.0-20191209225234-22774f7dae43 // indirect
 )

@@ -24,3 +24,8 @@ func main() {
 	m := Route()
 	log.Fatal(http.ListenAndServe(":8080", m))
 }
+
+// Calc 足し算するやつ
+func Calc(x, y int) int {
+	return x + y
+}

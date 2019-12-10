@@ -27,3 +27,10 @@ func TestRoute(t *testing.T) {
 		t.Fatalf("response of /contact?name=gopher returns %s, want %s", string(contact), expected)
 	}
 }
+
+// BenchmarkCalc 足し算する
+func BenchmarkCalc(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Calc(b.N, b.N)
+	}
+}
